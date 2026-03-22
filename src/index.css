@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  ::-webkit-scrollbar { width: 2px; }
+  ::-webkit-scrollbar-thumb { background: #d4f54e; opacity: 0.4; }
+  body { background: #06070d; }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .exp-row {
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .exp-row.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  .faq-body.open {
+    max-height: 300px;
+    padding-bottom: 20px;
+  }
+
+  .svc-left-bar {
+    height: 0;
+    transition: height 0.4s ease;
+  }
+  .svc-card:hover .svc-left-bar {
+    height: 100%;
+  }
+
+  .nav-link-hover::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #d4f54e;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: left;
+  }
+  .nav-link-hover:hover::after { transform: scaleX(1); }
+  .nav-link-hover:hover { color: #d4f54e; }
+
+  .ticker-track { animation: ticker 35s linear infinite; }
+  .ticker-track:hover { animation-play-state: paused; }
+}
