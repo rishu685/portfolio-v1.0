@@ -18,7 +18,7 @@ export default function StatsBar() {
     <div className="grid grid-cols-2 md:grid-cols-4 bg-s1 border-b border-white/[0.06]">
       <StatBox target={94} suffix="%+" label="Retrieval Precision"  sublabel="Hybrid BM25 + vector"  border />
       <StatBox target={7}  suffix=""   label="Days to Production"   sublabel="Avg turnaround"        border />
-      <StatBox target={5}  suffix="+"  label="Industry Internships" sublabel="C-DAC · Airtel · IBM"  border />
+      <StatBox target={3} label="Industry Internships" sublabel="C-DAC · Airtel · IBM"  border />
       <StatBox target={12} suffix="+"  label="Projects Shipped"     sublabel="LLM, RAG, Data Science" border={false} />
     </div>
   )
