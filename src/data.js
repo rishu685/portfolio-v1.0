@@ -47,6 +47,22 @@ export const PROJECTS = [
   },
   {
     cat: 'github', label: 'GitHub',
+    title: 'RabbitMQ Consumer Worker',
+    desc: 'Event-driven Node.js application that consumes RabbitMQ messages and pushes real-time updates to web clients using Socket.IO. Includes resilient reconnection, live dashboard, health monitoring, and Docker-based setup.',
+    metrics: [{ v:'RabbitMQ', l:'Queue' },{ v:'Socket.IO', l:'Realtime' },{ v:'Docker', l:'Deploy' }],
+    stack: ['Node.js','Express.js','RabbitMQ','Socket.IO','Docker','JavaScript'],
+    link: 'https://github.com/rishu685/rabbit-mq', nda: false,
+  },
+  {
+    cat: 'github', label: 'GitHub',
+    title: 'Finance RBAC Backend',
+    desc: 'Production-style finance backend with role-based access control, JWT authentication, records CRUD with filters, dashboard analytics endpoints, and robust validation/error handling.',
+    metrics: [{ v:'TypeScript', l:'Backend' },{ v:'JWT', l:'Auth' },{ v:'RBAC', l:'Security' }],
+    stack: ['Node.js','TypeScript','Express.js','SQLite','Zod','JWT','Vitest'],
+    link: 'https://github.com/rishu685/backend', nda: false,
+  },
+  {
+    cat: 'github', label: 'GitHub',
     title: 'Krowdfund',
     desc: 'A comprehensive crowdfunding platform built with React.js featuring user registration, project creation, and funding mechanisms. Implemented responsive design for optimal user experience across all devices.',
     metrics: [{ v:'React.js', l:'Frontend' },{ v:'Responsive', l:'Design' },{ v:'Live', l:'Demo' }],
@@ -116,6 +132,14 @@ export const PROJECTS = [
     metrics: [{ v:'Next.js 14', l:'Framework' },{ v:'Gemini AI', l:'Analysis' },{ v:'OMDB API', l:'Data' }],
     stack: ['Next.js 14','TypeScript','Tailwind CSS','Framer Motion','Gemini AI'],
     link: 'https://github.com/rishu685/omdb', nda: false,
+  },
+  {
+    cat: 'github', label: 'GitHub',
+    title: 'PDF Document Extraction Pipeline',
+    desc: 'Robust Python pipeline for extracting structured data from PDFs, including invoices, statements, and forms. Uses hybrid text extraction with OCR fallback, table detection for borderless layouts, and clean JSON output.',
+    metrics: [{ v:'Python', l:'Core' },{ v:'OCR', l:'Tesseract' },{ v:'JSON', l:'Output' }],
+    stack: ['Python','PyMuPDF','pytesseract','OpenCV','scikit-learn','pandas'],
+    link: 'https://github.com/rishu685/invoice', nda: false,
   },
 ]
 
